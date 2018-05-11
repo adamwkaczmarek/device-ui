@@ -1,0 +1,14 @@
+<div *ngIf="device">
+  <h2>
+    Device {{device.id | uppercase }}
+  </h2>
+  <div>
+    <label>Description:
+      <input [(ngModel)]="device.description" placeholder="description">
+    </label>
+  </div>
+  <div><label>Endpoint: </label>{{device.arnEndpoint}}</div>
+  <div><label>Topic: </label>{{device.topic}}</div>
+
+</div>
+
