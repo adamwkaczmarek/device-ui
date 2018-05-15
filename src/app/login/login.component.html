@@ -4,15 +4,15 @@
     <form class="form-signin">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="login" class="sr-only">Login</label>
-      <input type="text" id="login" class="form-control" placeholder="Login" required="" autofocus="">
+      <input type="text" id="login" name="user.id" class="form-control" placeholder="Login" required="" autofocus="" [(ngModel)]="user.id">
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <input type="password" id="inputPassword" name="user.password" class="form-control" placeholder="Password" required="" [(ngModel)]="user.password">
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" (click)="login()">Sign in</button>
       <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
     </form>
   </div>

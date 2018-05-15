@@ -7,6 +7,8 @@ import { DeviceDetailsComponent } from './device-details/device-details.componen
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {BsDropdownModule} from 'ngx-bootstrap';
+import {AuthenticationModule} from './shared/auth/authentication.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import {BsDropdownModule} from 'ngx-bootstrap';
     LoginComponent
   ],
   imports: [
+    HttpClientModule,
+    AuthenticationModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
