@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {DEVICES} from '../mock-device';
-import {Device} from '../device';
+import {Device} from './device';
+import {DevicesService} from './devices.service';
 
 @Component({
   selector: 'app-devices',
@@ -9,18 +9,21 @@ import {Device} from '../device';
 })
 export class DevicesComponent implements OnInit {
 
-  devices = DEVICES;
+  devices: Device[];
   selectedDevice: Device;
 
   onSelect(device: Device): void {
     this.selectedDevice = device;
   }
 
-  constructor() {
-  }
+  constructor(private deviceService: DevicesService) {}
 
   ngOnInit() {
+    this.getDevices();
+  }
 
+  getDevices() {
+    this.deviceService.getDevices().subscribe(devices => this.devices = devices);
   }
 
 }

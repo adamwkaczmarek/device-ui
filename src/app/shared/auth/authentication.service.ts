@@ -121,4 +121,12 @@ export class AuthenticationService implements AuthService {
       .setAccessToken(access_token)
       .setRefreshToken(refresh_token);
   }
+
+  public getAuthorizationHeaders(): HttpHeaders {
+    const authorizationHeaders = new HttpHeaders();
+    if (this.isAuthorized().map(isAuthorized => isAuthorized)) {
+      authorizationHeaders.append('Authorization', `Bearer ${this.getAccessToken().map(token => token)}`);
+    }
+    return authorizationHeaders;
+  }
 }

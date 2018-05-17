@@ -1,6 +1,6 @@
 export class Device {
-  id: string;
+  deviceId: string;
   arnEndpoint: string;
   topic:  string;
-  description: string;
+  deviceDesc: string;
 }

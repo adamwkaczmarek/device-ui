@@ -12,7 +12,7 @@ export class AuthenticatedGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     return this.authService.isAuthorized().map(isAuthorized => {
-      this.router.navigate(['login']);
+      if (!isAuthorized) { this.router.navigate(['login']); }
       return isAuthorized;
     });
   }

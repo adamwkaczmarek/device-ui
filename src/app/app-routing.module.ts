@@ -8,7 +8,8 @@ import {AuthenticatedGuard} from './shared/auth/authenticated.guard';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'dashboard', component: DevicesComponent, canActivate: [AuthenticatedGuard]}
+  {path: 'dashboard', component: DevicesComponent, canActivate: [AuthenticatedGuard]},
+  {path: 'devices', component: DevicesComponent, canActivate: [AuthenticatedGuard]}
 ];
 
 @NgModule({

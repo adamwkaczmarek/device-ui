@@ -18,7 +18,7 @@ export function factory(authenticationService: AuthenticationService) {
     providers: [
       TokenStorage,
       AuthenticationService,
-      { provide: PROTECTED_FALLBACK_PAGE_URI, useValue: '/' },
+      { provide: PROTECTED_FALLBACK_PAGE_URI, useValue: '/dashboard' },
       { provide: PUBLIC_FALLBACK_PAGE_URI, useValue: '/login' },
       {
         provide: AUTH_SERVICE,
