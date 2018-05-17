@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import {BsDropdownModule} from 'ngx-bootstrap';
 import {AuthenticationModule} from './shared/auth/authentication.module';
 import {HttpClientModule} from '@angular/common/http';
+import {AuthenticatedGuard} from './shared/auth/authenticated.guard';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     BsDropdownModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthenticatedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
