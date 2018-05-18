@@ -1,22 +1,27 @@
-<h2> My devices</h2>
-<table class="table">
-  <thead>
-  <tr>
-    <th scope="col">ID</th>
-    <th scope="col">Description</th>
-    <th scope="col">Arn Endpoint</th>
-    <th scope="col">Topic</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let device of devices" (click)="onSelect(device)" [class.selected]="device === selectedDevice">
-    <td>{{device.deviceId}}</td>
-    <td>{{device.deviceDesc}}</td>
-    <td>{{device.arnEndpoint}}</td>
-    <td>{{device.topic}}</td>
-  </tr>
-  </tbody>
-</table>
-
+<app-header></app-header>
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">My devices</h4>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Description</th>
+        <th scope="col">Arn Endpoint</th>
+        <th scope="col">Topic</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let device of devices" (click)="onSelect(device)"
+          [class.selected]="device === selectedDevice">
+        <td>{{device.deviceId}}</td>
+        <td>{{device.deviceDesc}}</td>
+        <td>{{device.arnEndpoint}}</td>
+        <td>{{device.topic}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 <!--<app-device-details [device]="selectedDevice"></app-device-details>-->
 

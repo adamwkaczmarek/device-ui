@@ -1,0 +1,95 @@
+/*-------------------------------------------------------------------*/
+/* === Landing screens === */
+/* Auth */
+.auth.login-full-bg {
+  background: url("../../assets/images/auth/login_1.jpg");
+  background-size: cover; }
+
+.auth.register-full-bg {
+  background: url("../../assets/images/auth/register_2.jpg");
+  background-size: cover; }
+
+.auth .auth-form-dark {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff; }
+  .auth .auth-form-dark .form-control {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff; }
+    .auth .auth-form-dark .form-control:-ms-input-placeholder {
+      color: #ffffff; }
+    .auth .auth-form-dark .form-control:-moz-placeholder {
+      color: #ffffff; }
+    .auth .auth-form-dark .form-control::-moz-placeholder {
+      color: #ffffff; }
+    .auth .auth-form-dark .form-control::-webkit-input-placeholder {
+      color: #ffffff; }
+
+.auth .auth-form-light {
+  background: #ffffff;
+  color: #000; }
+  .auth .auth-form-light .form-control {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #000; }
+    .auth .auth-form-light .form-control:-ms-input-placeholder {
+      color: #000; }
+    .auth .auth-form-light .form-control:-moz-placeholder {
+      color: #000; }
+    .auth .auth-form-light .form-control::-moz-placeholder {
+      color: #000; }
+    .auth .auth-form-light .form-control::-webkit-input-placeholder {
+      color: #000; }
+
+.auth .auth-form-transparent {
+  background: transparent;
+  color: #ffffff; }
+  .auth .auth-form-transparent form .form-group .form-control {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-color: rgba(255, 255, 255, 0.2); }
+
+.auth form .form-group {
+  position: relative; }
+  .auth form .form-group label {
+    margin-bottom: 0;
+    vertical-align: bottom;
+    font-size: .8125rem; }
+  .auth form .form-group .form-control {
+    background: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 2.5rem;
+    font-size: .9375rem; }
+  .auth form .form-group i {
+    position: absolute;
+    right: 1rem;
+    height: 18px;
+    top: calc((100% - 18px) / 2); }
+
+.auth form .btn {
+  font-size: 1.25rem; }
+
+.auth form .auth-link {
+  font-size: 0.875rem; }
+  .auth form .auth-link:hover {
+    color: initial; }
+
+/* Error */
+.error-page h1 {
+  font-size: 9.375rem;
+  line-height: 1; }
+  @media (max-width: 991px) {
+    .error-page h1 {
+      font-size: 8rem; } }
+
+.error-page h2 {
+  font-size: 4.375rem;
+  line-height: 1; }
+
+@media (min-width: 992px) {
+  .error-page .error-page-divider {
+    border-left: 3px solid rgba(255, 255, 255, 0.2); } }
+
+/*# sourceMappingURL=maps/style.css.map */

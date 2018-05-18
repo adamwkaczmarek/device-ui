@@ -10,6 +10,7 @@ import {BsDropdownModule} from 'ngx-bootstrap';
 import {AuthenticationModule} from './shared/auth/authentication.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthenticatedGuard} from './shared/auth/authenticated.guard';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {AuthenticatedGuard} from './shared/auth/authenticated.guard';
     AppComponent,
     DevicesComponent,
     DeviceDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     HttpClientModule,
