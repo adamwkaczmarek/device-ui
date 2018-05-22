@@ -11,6 +11,7 @@ import {AuthenticationModule} from './shared/auth/authentication.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthenticatedGuard} from './shared/auth/authenticated.guard';
 import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     DevicesComponent,
     DeviceDetailsComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
     HttpClientModule,

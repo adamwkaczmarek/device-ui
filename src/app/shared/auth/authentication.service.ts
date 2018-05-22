@@ -98,7 +98,7 @@ export class AuthenticationService implements AuthService {
     });
 
 
-    return this.http.post<AccessData>('/oauth/token', payload, {headers: headers})
+    return this.http.post<AccessData>('/api/auth/auth/oauth/token', payload, {headers: headers})
       .do((tokens: AccessData) => this.saveAccessData(tokens));
   }
 

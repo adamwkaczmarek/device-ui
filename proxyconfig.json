@@ -1,10 +1,8 @@
 {
-  "/oauth": {
-    "target": "http://localhost:8901/auth",
-    "secure": "false"
-  },
   "/api": {
-    "target": "http://localhost:5555",
-    "secure": "false"
+    "target": "https://6e2b5f9c-ff2f-4ad7-b3ac-fc8f5fbdc49a.mock.pstmn.io",
+    "secure": "true",
+    "changeOrigin": true,
+    "pathRewrite": {"^/proxy" : ""}
   }
 }
