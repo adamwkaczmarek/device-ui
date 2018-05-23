@@ -4,8 +4,8 @@
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Description</th>
-        <th scope="col">Arn Endpoint</th>
-        <th scope="col">Topic</th>
+        <!--<th scope="col">Arn Endpoint</th>-->
+        <!--<th scope="col">Topic</th>-->
         <th scope="col">Status</th>
       </tr>
       </thead>
@@ -13,9 +13,9 @@
       <tr *ngFor="let device of devices" (click)="onSelect(device)"
           [class.selected]="device === selectedDevice">
         <td>{{device.deviceId}}</td>
-        <td>{{device.deviceDesc}}</td>
-        <td>{{device.arnEndpoint}}</td>
-        <td>{{device.topic}}</td>
+        <td style="max-width:170px; word-wrap:break-word;">{{device.deviceDesc}}</td>
+        <!--<td>{{device.arnEndpoint}}</td>-->
+        <!--<td>{{device.topic}}</td>-->
         <td><label class="badge badge-danger">Offline</label></td>
       </tr>
       </tbody>

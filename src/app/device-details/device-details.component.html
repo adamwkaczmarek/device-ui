@@ -1,14 +1,38 @@
-<div *ngIf="device">
-  <h2>
-    Device {{device.id | uppercase }}
-  </h2>
-  <div>
-    <label>Description:
-      <input [(ngModel)]="device.description" placeholder="description">
-    </label>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Endpoint</label>
+      <div class="col-sm-9">
+        {{device.arnEndpoint}}
+      </div>
+    </div>
   </div>
-  <div><label>Endpoint: </label>{{device.arnEndpoint}}</div>
-  <div><label>Topic: </label>{{device.topic}}</div>
-
+  <div class="col-md-6">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Topic</label>
+      <div class="col-sm-9">
+        {{device.topic}}
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Description</label>
+      <div class="col-sm-9">
+        <textarea type="text" class="form-control" placeholder="Description"
+                  [(ngModel)]="device.deviceDesc"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button type="submit" class="btn btn-success mr-2">Save</button>
+
+
+
+
 

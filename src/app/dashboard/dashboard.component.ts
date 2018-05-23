@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Device} from "../devices/device";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  selectedDevice: Device;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  onSelectedDevice(device: Device) {
+    this.selectedDevice = device;
   }
 
 }

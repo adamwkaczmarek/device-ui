@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Device} from './device';
 import {DevicesService} from './devices.service';
 
@@ -10,10 +10,10 @@ import {DevicesService} from './devices.service';
 export class DevicesComponent implements OnInit {
 
   devices: Device[];
-  selectedDevice: Device;
+  @Output()selectedDevice = new EventEmitter<Device>();
 
   onSelect(device: Device): void {
-    this.selectedDevice = device;
+    this.selectedDevice.emit(device);
   }
 
   constructor(private deviceService: DevicesService) {}
