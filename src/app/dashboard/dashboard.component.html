@@ -1,0 +1,41 @@
+<div class="container-scroller">
+  <app-header></app-header>
+  <div class="container-fluid page-body-wrapper" style="padding-top: 5%;">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-category">
+            <span class="nav-link">GENERAL</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard">
+              <span class="menu-title">Dashboard</span>
+              <i class="icon-speedometer menu-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-lg-7 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4>My devices</h4>
+                <app-devices></app-devices>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4>Device details</h4>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
